@@ -63,7 +63,7 @@ Usage is very easy this library uses manipulators to make work easy,
 
 ~~~cpp
 // background
-std::cout << ansi::bg__yellow;
+std::cout << ansi::bg_yellow;
 // foreground
 std::cout << ansi::fg_blue;
 // output

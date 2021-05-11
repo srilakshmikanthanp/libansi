@@ -102,7 +102,7 @@ std::cout << ansi::reset;
 
 ~~~cpp
 // colorize the text
-std::cout << ansi::colorize("Text Here");
+std::cout << ansi::colorize("Text Here to colorize");
 ~~~
 
 **to string:**

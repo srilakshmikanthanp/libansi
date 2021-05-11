@@ -111,8 +111,8 @@ You can easily convert this manipulators to string by using `ansi::str`
 
 ~~~cpp
 std::string bg_yellow = ansi::str(ansi::bg_yellow);
-std::string fg_blue = ansi::str(ansi::fg_blue);
-std::string reset = ansi::str(ansi::reset);
+std::string fg_blue   = ansi::str(ansi::fg_blue);
+std::string reset     = ansi::str(ansi::reset);
 
 std::cout << bg_yelow;
 // foreground

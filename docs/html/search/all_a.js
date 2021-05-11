@@ -1,6 +1,13 @@
 var searchData=
 [
-  ['operator_3c_3c_63',['operator&lt;&lt;',['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1cursor.html#aa8dc2a37ef130e0d3dddd9f52110f920',1,'srilakshmikanthanp::ANSI::cursor::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1clrscr.html#a9ff44218d34b187bd3c79d390720f81e',1,'srilakshmikanthanp::ANSI::clrscr::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1clrlin.html#a4ab04b1a3840735380d8d24ab54b2224',1,'srilakshmikanthanp::ANSI::clrlin::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1scrollup.html#a92052ce13df5b32b93ca8c15ff908538',1,'srilakshmikanthanp::ANSI::scrollup::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1scrolldn.html#ae3cb85501a440cf4f8a9ef67229905bd',1,'srilakshmikanthanp::ANSI::scrolldn::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1font.html#a6bc1d81f0d8c7e453305dfafe15049e2',1,'srilakshmikanthanp::ANSI::font::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1_f_gcolor.html#a5d481c3e790f424f87466ee198d8a1bc',1,'srilakshmikanthanp::ANSI::FGcolor::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1_b_gcolor.html#a40d5a5eb6f05fb9baf51c433570c243c',1,'srilakshmikanthanp::ANSI::BGcolor::operator&lt;&lt;()'],['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1underlinecolor.html#a3a414b686a31ab082c2b63c18b45907d',1,'srilakshmikanthanp::ANSI::underlinecolor::operator&lt;&lt;()']]],
-  ['ostream_64',['OSTREAM',['../_a_n_s_i_8hpp.html#a401c254d356f0bd58122de53e7ca27b1',1,'ANSI.hpp']]],
-  ['overlined_65',['overlined',['../namespacesrilakshmikanthanp_1_1_a_n_s_i.html#ad63c3b278f54c57a336d39888e7d9f93',1,'srilakshmikanthanp::ANSI']]]
+  ['normalintensity_55',['normalintensity',['../namespacesrilakshmikanthanp_1_1ansi.html#abc6eb50fbef5e8c0bcd5559a301e12ea',1,'srilakshmikanthanp::ansi']]],
+  ['notblink_56',['notblink',['../namespacesrilakshmikanthanp_1_1ansi.html#ae13c33de4cf48d9ae1c2c1e73dc50bd1',1,'srilakshmikanthanp::ansi']]],
+  ['notconceal_57',['notconceal',['../namespacesrilakshmikanthanp_1_1ansi.html#aed456343ca1a1886ab3b35eb28f1680c',1,'srilakshmikanthanp::ansi']]],
+  ['notemoj_58',['notemoj',['../namespacesrilakshmikanthanp_1_1ansi.html#ae5513150674bb74e5d871f874e6f669d',1,'srilakshmikanthanp::ansi']]],
+  ['notinvert_59',['notinvert',['../namespacesrilakshmikanthanp_1_1ansi.html#ad9184fd70c948c82f0a7f43c2af6534d',1,'srilakshmikanthanp::ansi']]],
+  ['notitalic_60',['notitalic',['../namespacesrilakshmikanthanp_1_1ansi.html#aa1032228e2d8ecde6b93243ceca30ca3',1,'srilakshmikanthanp::ansi']]],
+  ['notoverlined_61',['notoverlined',['../namespacesrilakshmikanthanp_1_1ansi.html#a6e77c8e1fa919d689b3a0600e9efe5c4',1,'srilakshmikanthanp::ansi']]],
+  ['notprospace_62',['notprospace',['../namespacesrilakshmikanthanp_1_1ansi.html#a65091d09d25bbf2b101bc0ac80a7b224',1,'srilakshmikanthanp::ansi']]],
+  ['notstrike_63',['notstrike',['../namespacesrilakshmikanthanp_1_1ansi.html#af5be4e2c4b53a2e21983432971e753e4',1,'srilakshmikanthanp::ansi']]],
+  ['notunderline_64',['notunderline',['../namespacesrilakshmikanthanp_1_1ansi.html#aa203260cee4c66d182caeb5c0aeb5854',1,'srilakshmikanthanp::ansi']]]
 ];

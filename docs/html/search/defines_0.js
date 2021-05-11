@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ostream_171',['OSTREAM',['../_a_n_s_i_8hpp.html#a401c254d356f0bd58122de53e7ca27b1',1,'ANSI.hpp']]]
+  ['_5fuse_5fmath_5fdefines_173',['_USE_MATH_DEFINES',['../_a_n_s_i_8hpp.html#a525335710b53cb064ca56b936120431e',1,'ANSI.hpp']]]
 ];

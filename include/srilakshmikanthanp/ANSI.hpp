@@ -6,11 +6,14 @@
 #ifndef ANSI_HPP
 #define ANSI_HPP
 
+#define _USE_MATH_DEFINES
+
 #ifdef __linux__
 
     #include <iostream>
     #include <string>
     #include <sstream>
+    #include <math.h>
 
     int ANSI__init()
     {
@@ -23,6 +26,7 @@
     #include <string>
     #include <sstream>
     #include <windows.h>
+    #include <math.h>
 
     int ANSI__init()
     {
@@ -57,10 +61,10 @@
 }(std::string(str))
 
 /**
- * @namespace srilakshmikanthanp::ANSI
+ * @namespace srilakshmikanthanp::ansi
  * @brief  contains ansi escape sequence
  */
-namespace srilakshmikanthanp::ANSI
+namespace srilakshmikanthanp::ansi
 {
     /**
      * @brief error code, Make sure it is zero
@@ -425,7 +429,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground black
      */
     TEMPLATE
-    OSTREAM &FGblack(OSTREAM &os)
+    OSTREAM &fg_black(OSTREAM &os)
     {
         return os << W("\033[30m");
     }
@@ -434,7 +438,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground red
      */
     TEMPLATE
-    OSTREAM &FGred(OSTREAM &os)
+    OSTREAM &fg_red(OSTREAM &os)
     {
         return os << W("\033[31m");
     }
@@ -443,7 +447,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground green
      */
     TEMPLATE
-    OSTREAM &FGgreen(OSTREAM &os)
+    OSTREAM &fg_green(OSTREAM &os)
     {
         return os << W("\033[32m");
     }
@@ -452,7 +456,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground yellow
      */
     TEMPLATE
-    OSTREAM &FGyellow(OSTREAM &os)
+    OSTREAM &fg_yellow(OSTREAM &os)
     {
         return os << W("\033[33m");
     }
@@ -461,7 +465,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground blue
      */
     TEMPLATE
-    OSTREAM &FGblue(OSTREAM &os)
+    OSTREAM &fg_blue(OSTREAM &os)
     {
         return os << W("\033[34m");
     }
@@ -470,7 +474,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground magenta
      */
     TEMPLATE
-    OSTREAM &FGmagenta(OSTREAM &os)
+    OSTREAM &fg_magenta(OSTREAM &os)
     {
         return os << W("\033[35m");
     }
@@ -479,7 +483,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground cyan
      */
     TEMPLATE
-    OSTREAM &FGcyan(OSTREAM &os)
+    OSTREAM &fg_cyan(OSTREAM &os)
     {
         return os << W("\033[36m");
     }
@@ -488,7 +492,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground white
      */
     TEMPLATE
-    OSTREAM &FGwhite(OSTREAM &os)
+    OSTREAM &fg_white(OSTREAM &os)
     {
         return os << W("\033[37m");
     }
@@ -497,7 +501,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightblack
      */
     TEMPLATE
-    OSTREAM &FGbrightblack(OSTREAM &os)
+    OSTREAM &fg_brightblack(OSTREAM &os)
     {
         return os << W("\033[90m");
     }
@@ -506,7 +510,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightred
      */
     TEMPLATE
-    OSTREAM &FGbrightred(OSTREAM &os)
+    OSTREAM &fg_brightred(OSTREAM &os)
     {
         return os << W("\033[91m");
     }
@@ -515,7 +519,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightgreen
      */
     TEMPLATE
-    OSTREAM &FGbrightgreen(OSTREAM &os)
+    OSTREAM &fg_brightgreen(OSTREAM &os)
     {
         return os << W("\033[92m");
     }
@@ -524,7 +528,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightyellow
      */
     TEMPLATE
-    OSTREAM &FGbrightyellow(OSTREAM &os)
+    OSTREAM &fg_brightyellow(OSTREAM &os)
     {
         return os << W("\033[93m");
     }
@@ -533,7 +537,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightblue
      */
     TEMPLATE
-    OSTREAM &FGbrightblue(OSTREAM &os)
+    OSTREAM &fg_brightblue(OSTREAM &os)
     {
         return os << W("\033[94m");
     }
@@ -542,7 +546,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightmagenta
      */
     TEMPLATE
-    OSTREAM &FGbrightmagenta(OSTREAM &os)
+    OSTREAM &fg_brightmagenta(OSTREAM &os)
     {
         return os << W("\033[95m");
     }
@@ -551,7 +555,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightcyan
      */
     TEMPLATE
-    OSTREAM &FGbrightcyan(OSTREAM &os)
+    OSTREAM &fg_brightcyan(OSTREAM &os)
     {
         return os << W("\033[96m");
     }
@@ -560,7 +564,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground brightwhite
      */
     TEMPLATE
-    OSTREAM &FGbrightwhite(OSTREAM &os)
+    OSTREAM &fg_brightwhite(OSTREAM &os)
     {
         return os << W("\033[97m");
     }
@@ -569,7 +573,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief Foreground default
      */
     TEMPLATE
-    OSTREAM &FGdefault(OSTREAM &os)
+    OSTREAM &fg_default(OSTREAM &os)
     {
         return os << W("\033[39m");
     }
@@ -577,22 +581,22 @@ namespace srilakshmikanthanp::ANSI
     /**
      * @brief Foreground color 
      */
-    struct FGcolor
+    struct fg_color
     {
     private:
         int n, r, g, b;
 
     public:
-        FGcolor(int n) : n{n}, r{-1}, g{-1}, b{-1}
+        fg_color(int n) : n{n}, r{-1}, g{-1}, b{-1}
         {
         }
 
-        FGcolor(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
+        fg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
         {
         }
 
         TEMPLATE
-        friend OSTREAM &operator<<(OSTREAM &os, const FGcolor &ref)
+        friend OSTREAM &operator<<(OSTREAM &os, const fg_color &ref)
         {
             if (ref.n >= 0 && ref.n <= 255)
             {
@@ -613,7 +617,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background black
      */
     TEMPLATE
-    OSTREAM &BGblack(OSTREAM &os)
+    OSTREAM &bg_black(OSTREAM &os)
     {
         return os << W("\033[40m");
     }
@@ -622,7 +626,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background red
      */
     TEMPLATE
-    OSTREAM &BGred(OSTREAM &os)
+    OSTREAM &bg_red(OSTREAM &os)
     {
         return os << W("\033[41m");
     }
@@ -631,7 +635,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background green
      */
     TEMPLATE
-    OSTREAM &BGgreen(OSTREAM &os)
+    OSTREAM &bg_green(OSTREAM &os)
     {
         return os << W("\033[42m");
     }
@@ -640,7 +644,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background yellow
      */
     TEMPLATE
-    OSTREAM &BGyellow(OSTREAM &os)
+    OSTREAM &bg_yellow(OSTREAM &os)
     {
         return os << W("\033[43m");
     }
@@ -649,7 +653,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background blue
      */
     TEMPLATE
-    OSTREAM &BGblue(OSTREAM &os)
+    OSTREAM &bg_blue(OSTREAM &os)
     {
         return os << W("\033[44m");
     }
@@ -658,7 +662,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background magenta
      */
     TEMPLATE
-    OSTREAM &BGmagenta(OSTREAM &os)
+    OSTREAM &bg_magenta(OSTREAM &os)
     {
         return os << W("\033[45m");
     }
@@ -667,7 +671,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background cyan
      */
     TEMPLATE
-    OSTREAM &BGcyan(OSTREAM &os)
+    OSTREAM &bg_cyan(OSTREAM &os)
     {
         return os << W("\033[46m");
     }
@@ -676,7 +680,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background white
      */
     TEMPLATE
-    OSTREAM &BGwhite(OSTREAM &os)
+    OSTREAM &bg_white(OSTREAM &os)
     {
         return os << W("\033[47m");
     }
@@ -685,7 +689,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightblack
      */
     TEMPLATE
-    OSTREAM &BGbrightblack(OSTREAM &os)
+    OSTREAM &bg_brightblack(OSTREAM &os)
     {
         return os << W("\033[100m");
     }
@@ -694,7 +698,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightred
      */
     TEMPLATE
-    OSTREAM &BGbrightred(OSTREAM &os)
+    OSTREAM &bg_brightred(OSTREAM &os)
     {
         return os << W("\033[101m");
     }
@@ -703,7 +707,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightgreen
      */
     TEMPLATE
-    OSTREAM &BGbrightgreen(OSTREAM &os)
+    OSTREAM &bg_brightgreen(OSTREAM &os)
     {
         return os << W("\033[102m");
     }
@@ -712,7 +716,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightyellow
      */
     TEMPLATE
-    OSTREAM &BGbrightyellow(OSTREAM &os)
+    OSTREAM &bg_brightyellow(OSTREAM &os)
     {
         return os << W("\033[103m");
     }
@@ -721,7 +725,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightblue
      */
     TEMPLATE
-    OSTREAM &BGbrightblue(OSTREAM &os)
+    OSTREAM &bg_brightblue(OSTREAM &os)
     {
         return os << W("\033[104m");
     }
@@ -730,7 +734,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightmagenta
      */
     TEMPLATE
-    OSTREAM &BGbrightmagenta(OSTREAM &os)
+    OSTREAM &bg_brightmagenta(OSTREAM &os)
     {
         return os << W("\033[105m");
     }
@@ -739,7 +743,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightcyan
      */
     TEMPLATE
-    OSTREAM &BGbrightcyan(OSTREAM &os)
+    OSTREAM &bg_brightcyan(OSTREAM &os)
     {
         return os << W("\033[96m");
     }
@@ -748,7 +752,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background brightwhite
      */
     TEMPLATE
-    OSTREAM &BGbrightwhite(OSTREAM &os)
+    OSTREAM &bg_brightwhite(OSTREAM &os)
     {
         return os << W("\033[97m");
     }
@@ -757,7 +761,7 @@ namespace srilakshmikanthanp::ANSI
      * @brief background default
      */
     TEMPLATE
-    OSTREAM &BGdefault(OSTREAM &os)
+    OSTREAM &bg_default(OSTREAM &os)
     {
         return os << W("\033[49m");
     }
@@ -765,22 +769,22 @@ namespace srilakshmikanthanp::ANSI
     /**
      * @brief background color 
      */
-    struct BGcolor
+    struct bg_color
     {
     private:
         int n, r, g, b;
 
     public:
-        BGcolor(int n) : n{n}, r{-1}, g{-1}, b{-1}
+        bg_color(int n) : n{n}, r{-1}, g{-1}, b{-1}
         {
         }
 
-        BGcolor(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
+        bg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
         {
         }
 
         TEMPLATE
-        friend OSTREAM &operator<<(OSTREAM &os, const BGcolor &ref)
+        friend OSTREAM &operator<<(OSTREAM &os, const bg_color &ref)
         {
             if (ref.n >= 0 && ref.n <= 255)
             {
@@ -913,11 +917,70 @@ namespace srilakshmikanthanp::ANSI
         return os << W("\033[74m");
     }
 
+    /**
+     * @brief colorize the given text 
+     */
+    class colorize
+    {
+    private:
+        double fq1, fq2, fq3, amp, cen, ps1, ps2, ps3;
+        std::string str;
+
+    public:
+        /**
+         * @brief Construct a new colorize object
+         * 
+         * @param str string
+         */
+        colorize(std::string str) : str(str)
+        {
+            fq1 = 2 * M_PI / str.size();
+            fq2 = 2 * M_PI / str.size();
+            fq3 = 2 * M_PI / str.size();
+            amp = 127;
+            cen = 128;
+            ps1 = 0 * M_PI/3;
+            ps2 = 2 * M_PI/3;
+            ps3 = 4 * M_PI/3;  
+        }
+
+        /**
+         * @brief output
+         * 
+         * @param os stream
+         * @param obj obj
+         * @return OSTREAM& stream
+         */
+        TEMPLATE
+        friend OSTREAM& operator<<(OSTREAM& os, const colorize &obj)
+        {
+            int r = 0, g = 0, b = 0, v = 0;
+
+            for(std::string::size_type i = 0; i < obj.str.size(); ++i)
+            {
+                if(!std::isspace(obj.str[i]))
+                {
+                    r  =  std::sin(obj.fq1 * v + obj.ps1) * obj.amp + obj.cen;
+                    g  =  std::sin(obj.fq2 * v + obj.ps2) * obj.amp + obj.cen;
+                    b  =  std::sin(obj.fq3 * v + obj.ps3) * obj.amp + obj.cen;
+                    v  =  v + 1;
+                    os << fg_color(r, g, b) << obj.str[i];
+                }
+                else
+                {
+                    os << obj.str[i];
+                }
+            }
+
+            return os << reset;
+        }
+    };
 } // namespace srilakshmikanthanp::ansi
 
 /**
  * @brief undef macros 
  */
+#undef _USE_MATH_DEFINES
 #undef TEMPLATE
 #undef OSTREAM
 #undef STRING

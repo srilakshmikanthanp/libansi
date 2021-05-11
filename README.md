@@ -63,53 +63,60 @@ Usage is very easy this library uses manipulators to make work easy,
 
 ~~~cpp
 // background
-std::cout << ANSI::BGyellow;
+std::cout << ansi::bg__yellow;
 // foreground
-std::cout << ANSI::FGblue;
+std::cout << ansi::fg_blue;
 // output
 std::cout << "Blue on yellow";
 // reset
-std::cout << ANSI::reset;
+std::cout << ansi::reset;
 ~~~
 
 **8 bit color:**
 
 ~~~cpp
 // background
-std::cout << ANSI::BGcolor(157);
+std::cout << ansi::bg_color(157);
 // foreground
-std::cout << ANSI::FGcolor(100);
+std::cout << ansi::fg_color(100);
 // outpt
 std::cout << "8 bit color";
 // reset
-std::cout << ANSI::reset;
+std::cout << ansi::reset;
 ~~~
 
 **24 bit color:**
 
 ~~~cpp
 // background
-std::cout << ANSI::BGcolor(0, 255, 0);
+std::cout << ansi::bg_color(0, 255, 0);
 // foreground
-std::cout << ANSI::FGcolor(0, 0, 255);
+std::cout << ansi::fg_color(0, 0, 255);
 // output
 std::cout << "24 bit color";
 // reset
-std::cout << ANSI::reset;
+std::cout << ansi::reset;
+~~~
+
+**colorize:**
+
+~~~cpp
+// colorize the text
+std::cout << ansi::colorize("Text Here");
 ~~~
 
 **to string:**
 
-You can easily convert this manipulators to string by using `ANSI::str`
+You can easily convert this manipulators to string by using `ansi::str`
 
 ~~~cpp
-std::string BGyellow = ANSI::str(ANSI::BGyellow);
-std::string FGblue = ANSI::str(ANSI::FGblue);
-std::string reset = ANSI::str(ANSI::reset);
+std::string bg_yellow = ansi::str(ansi::bg_yellow);
+std::string fg_blue = ansi::str(ansi::fg_blue);
+std::string reset = ansi::str(ansi::reset);
 
-std::cout << BGyelow;
+std::cout << bg_yelow;
 // foreground
-std::cout << FGblue;
+std::cout << fg_blue;
 // output
 std::cout << "Blue on Yellow";
 // reset

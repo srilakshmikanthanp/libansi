@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fgcolor_87',['FGcolor',['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1_f_gcolor.html',1,'srilakshmikanthanp::ANSI']]],
-  ['font_88',['font',['../structsrilakshmikanthanp_1_1_a_n_s_i_1_1font.html',1,'srilakshmikanthanp::ANSI']]]
+  ['fg_5fcolor_89',['fg_color',['../structsrilakshmikanthanp_1_1ansi_1_1fg__color.html',1,'srilakshmikanthanp::ansi']]],
+  ['font_90',['font',['../structsrilakshmikanthanp_1_1ansi_1_1font.html',1,'srilakshmikanthanp::ansi']]]
 ];

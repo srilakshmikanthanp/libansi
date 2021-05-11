@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reset_67',['reset',['../namespacesrilakshmikanthanp_1_1_a_n_s_i.html#a96645a4879a964f89e1954325c2da814',1,'srilakshmikanthanp::ANSI']]]
+  ['prospace_68',['prospace',['../namespacesrilakshmikanthanp_1_1ansi.html#aa41e7570d0a70d93626ef074fdc8479f',1,'srilakshmikanthanp::ansi']]]
 ];

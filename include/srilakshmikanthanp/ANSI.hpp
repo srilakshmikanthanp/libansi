@@ -856,12 +856,12 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background default
+     * @brief Underline default
      */
     TEMPLATE
     OSTREAM &defaultunderlinecolor(OSTREAM &os)
     {
-        return os << W("\033[49m");
+        return os << W("\033[59m");
     }
 
     /**

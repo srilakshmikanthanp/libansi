@@ -247,7 +247,7 @@ namespace ansi
     }
 
     /**
-     * @brief reset manipulator
+     * @brief Reset manipulator
      */
     TEMPLATE
     OSTREAM &reset(OSTREAM &os)
@@ -274,7 +274,7 @@ namespace ansi
     }
 
     /**
-     * @brief italic 
+     * @brief Italic
      */
     TEMPLATE
     OSTREAM &italic(OSTREAM &os)
@@ -283,7 +283,7 @@ namespace ansi
     }
 
     /**
-     * @brief 	Underline
+     * @brief Underline
      */
     TEMPLATE
     OSTREAM &underline(OSTREAM &os)
@@ -301,7 +301,7 @@ namespace ansi
     }
 
     /**
-     * @brief invert
+     * @brief Invert
      */
     TEMPLATE
     OSTREAM &invert(OSTREAM &os)
@@ -319,7 +319,7 @@ namespace ansi
     }
 
     /**
-     * @brief strike
+     * @brief Strike
      */
     TEMPLATE
     OSTREAM &strike(OSTREAM &os)
@@ -328,7 +328,7 @@ namespace ansi
     }
 
     /**
-     * @brief font 
+     * @brief Font
      */
     struct font
     {
@@ -364,7 +364,7 @@ namespace ansi
     }
 
     /**
-     * @brief not italic
+     * @brief Not italic
      */
     TEMPLATE
     OSTREAM &notitalic(OSTREAM &os)
@@ -373,7 +373,7 @@ namespace ansi
     }
 
     /**
-     * @brief not underlined
+     * @brief Not underlined
      */
     TEMPLATE
     OSTREAM &notunderline(OSTREAM &os)
@@ -382,7 +382,7 @@ namespace ansi
     }
 
     /**
-     * @brief not blinked
+     * @brief Not blinked
      */
     TEMPLATE
     OSTREAM &notblink(OSTREAM &os)
@@ -391,7 +391,7 @@ namespace ansi
     }
 
     /**
-     * @brief proportional space
+     * @brief Proportional space
      */
     TEMPLATE
     OSTREAM &prospace(OSTREAM &os)
@@ -400,7 +400,7 @@ namespace ansi
     }
 
     /**
-     * @brief not invert
+     * @brief Not invert
      */
     TEMPLATE
     OSTREAM &notinvert(OSTREAM &os)
@@ -409,7 +409,7 @@ namespace ansi
     }
 
     /**
-     * @brief not conceal
+     * @brief Not conceal
      */
     TEMPLATE
     OSTREAM &notconceal(OSTREAM &os)
@@ -418,7 +418,7 @@ namespace ansi
     }
 
     /**
-     * @brief not strkie
+     * @brief Not strkie
      */
     TEMPLATE
     OSTREAM &notstrike(OSTREAM &os)
@@ -615,7 +615,7 @@ namespace ansi
     };
 
     /**
-     * @brief background black
+     * @brief Background black
      */
     TEMPLATE
     OSTREAM &bg_black(OSTREAM &os)
@@ -624,7 +624,7 @@ namespace ansi
     }
 
     /**
-     * @brief background red
+     * @brief Background red
      */
     TEMPLATE
     OSTREAM &bg_red(OSTREAM &os)
@@ -633,7 +633,7 @@ namespace ansi
     }
 
     /**
-     * @brief background green
+     * @brief Background green
      */
     TEMPLATE
     OSTREAM &bg_green(OSTREAM &os)
@@ -642,7 +642,7 @@ namespace ansi
     }
 
     /**
-     * @brief background yellow
+     * @brief Background yellow
      */
     TEMPLATE
     OSTREAM &bg_yellow(OSTREAM &os)
@@ -651,7 +651,7 @@ namespace ansi
     }
 
     /**
-     * @brief background blue
+     * @brief Background blue
      */
     TEMPLATE
     OSTREAM &bg_blue(OSTREAM &os)
@@ -660,7 +660,7 @@ namespace ansi
     }
 
     /**
-     * @brief background magenta
+     * @brief Background magenta
      */
     TEMPLATE
     OSTREAM &bg_magenta(OSTREAM &os)
@@ -669,7 +669,7 @@ namespace ansi
     }
 
     /**
-     * @brief background cyan
+     * @brief Background cyan
      */
     TEMPLATE
     OSTREAM &bg_cyan(OSTREAM &os)
@@ -678,7 +678,7 @@ namespace ansi
     }
 
     /**
-     * @brief background white
+     * @brief Background white
      */
     TEMPLATE
     OSTREAM &bg_white(OSTREAM &os)
@@ -687,7 +687,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightblack
+     * @brief Background brightblack
      */
     TEMPLATE
     OSTREAM &bg_brightblack(OSTREAM &os)
@@ -696,7 +696,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightred
+     * @brief Background brightred
      */
     TEMPLATE
     OSTREAM &bg_brightred(OSTREAM &os)
@@ -705,7 +705,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightgreen
+     * @brief Background brightgreen
      */
     TEMPLATE
     OSTREAM &bg_brightgreen(OSTREAM &os)
@@ -714,7 +714,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightyellow
+     * @brief Background brightyellow
      */
     TEMPLATE
     OSTREAM &bg_brightyellow(OSTREAM &os)
@@ -723,7 +723,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightblue
+     * @brief Background brightblue
      */
     TEMPLATE
     OSTREAM &bg_brightblue(OSTREAM &os)
@@ -732,7 +732,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightmagenta
+     * @brief Background brightmagenta
      */
     TEMPLATE
     OSTREAM &bg_brightmagenta(OSTREAM &os)
@@ -741,7 +741,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightcyan
+     * @brief Background brightcyan
      */
     TEMPLATE
     OSTREAM &bg_brightcyan(OSTREAM &os)
@@ -750,7 +750,7 @@ namespace ansi
     }
 
     /**
-     * @brief background brightwhite
+     * @brief Background brightwhite
      */
     TEMPLATE
     OSTREAM &bg_brightwhite(OSTREAM &os)
@@ -759,7 +759,7 @@ namespace ansi
     }
 
     /**
-     * @brief background default
+     * @brief Background default
      */
     TEMPLATE
     OSTREAM &bg_default(OSTREAM &os)
@@ -768,7 +768,7 @@ namespace ansi
     }
 
     /**
-     * @brief background color 
+     * @brief Background color
      */
     struct bg_color
     {
@@ -803,7 +803,7 @@ namespace ansi
     };
 
     /**
-     * @brief not proprotional space
+     * @brief Not proprotional space
      */
     TEMPLATE
     OSTREAM &notprospace(OSTREAM &os)
@@ -812,7 +812,7 @@ namespace ansi
     }
 
     /**
-     * @brief framed
+     * @brief Framed
      */
     TEMPLATE
     OSTREAM &framed(OSTREAM &os)
@@ -821,7 +821,7 @@ namespace ansi
     }
 
     /**
-     * @brief encircled
+     * @brief Encircled
      */
     TEMPLATE
     OSTREAM &encircled(OSTREAM &os)
@@ -839,7 +839,7 @@ namespace ansi
     }
 
     /**
-     * @brief not framed or encircled
+     * @brief Not framed or encircled
      */
     TEMPLATE
     OSTREAM &notemoj(OSTREAM &os)
@@ -848,7 +848,7 @@ namespace ansi
     }
 
     /**
-     * @brief not overlined
+     * @brief Not overlined
      */
     TEMPLATE
     OSTREAM &notoverlined(OSTREAM &os)
@@ -901,7 +901,7 @@ namespace ansi
     };
 
     /**
-     * @brief super script
+     * @brief Superscript
      */
     TEMPLATE
     OSTREAM &supscript(OSTREAM &os)
@@ -910,7 +910,7 @@ namespace ansi
     }
 
     /**
-     * @brief sub script
+     * @brief Subscript
      */
     TEMPLATE
     OSTREAM &subscript(OSTREAM &os)
@@ -919,7 +919,7 @@ namespace ansi
     }
 
     /**
-     * @brief colorize the given text 
+     * @brief Colorize the given text
      */
     class colorize
     {

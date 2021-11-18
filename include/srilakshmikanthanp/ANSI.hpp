@@ -1086,6 +1086,15 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
+     * @brief Not superscript or subscript
+     */
+    TEMPLATE
+    OSTREAM &notscript(OSTREAM &os)
+    {
+        return os << W("\033[75m");
+    }
+
+    /**
      * @brief colorize the given text 
      */
     class colorize

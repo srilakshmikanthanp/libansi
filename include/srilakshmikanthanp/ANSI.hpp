@@ -64,7 +64,8 @@
  * @namespace srilakshmikanthanp::ansi
  * @brief  contains ansi escape sequence
  */
-namespace srilakshmikanthanp::ansi
+namespace srilakshmikanthanp {
+namespace ansi
 {
     /**
      * @brief error code, Make sure it is zero
@@ -975,7 +976,8 @@ namespace srilakshmikanthanp::ansi
             return os << reset;
         }
     };
-} // namespace srilakshmikanthanp::ansi
+} // namespace ansi
+} // namespace srilakshmikanthanp
 
 /**
  * @brief undef macros 

@@ -119,8 +119,9 @@ namespace ansi
     };
 
     /**
-     * @brief Clears part of the screen. If n is 0 (or missing), 
-     * clear from cursor to end of screen. 
+     * @brief Clears part of the screen.
+     *
+     * If n is 0 (or missing), clear from cursor to end of screen.
      * If n is 1, clear from cursor to beginning of the screen. 
      * If n is 2, clear entire screen (and moves cursor to upper 
      * left on DOS ansi.SYS). If n is 3, clear entire screen and 
@@ -146,7 +147,9 @@ namespace ansi
     };
 
     /**
-     * @brief Erases part of the line. If n is 0 (or missing),
+     * @brief Erases part of the line.
+     *
+     * If n is 0 (or missing),
      * clear from cursor to the end of the line. If n is 1, 
      * clear from cursor to beginning of the line. If n is 2, 
      * clear entire line. Cursor position does not change. 
@@ -169,7 +172,8 @@ namespace ansi
     };
 
     /**
-     * @brief Scroll whole page up by n (default 1) lines. 
+     * @brief Scroll whole page up by n (default 1) lines.
+     *
      * New lines are added at the bottom.
      */
     struct scrollup
@@ -190,7 +194,8 @@ namespace ansi
     };
 
     /**
-     * @brief Scroll whole page down by n (default 1) lines. 
+     * @brief Scroll whole page down by n (default 1) lines.
+     *
      * New lines are added at the top.  
      */
     struct scrolldn

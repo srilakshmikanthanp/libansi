@@ -237,7 +237,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief Restore Saved Cursor Position
+     * @brief Hides the cursor
      */
     TEMPLATE
     OSTREAM &hidecursor(OSTREAM &os)
@@ -865,7 +865,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background color 
+     * @brief Underline color
      */
     struct underlinecolor
     {

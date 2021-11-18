@@ -98,6 +98,174 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
+     * @brief Moves the cursor up n (default 1) cells.
+     *
+     * If the cursor is already at the edge of the screen, this has no effect.
+     */
+    struct cursorup
+    {
+    private:
+        int n;
+
+    public:
+        cursorup(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorup &cup)
+        {
+            return os << W("\033[") << cup.n << W("A");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor down n (default 1) cells.
+     *
+     * If the cursor is already at the edge of the screen, this has no effect.
+     */
+    struct cursordn
+    {
+    private:
+        int n;
+
+    public:
+        cursordn(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursordn &cdn)
+        {
+            return os << W("\033[") << cdn.n << W("B");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor forward n (default 1) cells.
+     *
+     * If the cursor is already at the edge of the screen, this has no effect.
+     */
+    struct cursorfw
+    {
+    private:
+        int n;
+
+    public:
+        cursorfw(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorfw &cfw)
+        {
+            return os << W("\033[") << cfw.n << W("C");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor back n (default 1) cells.
+     *
+     * If the cursor is already at the edge of the screen, this has no effect.
+     */
+    struct cursorbk
+    {
+    private:
+        int n;
+
+    public:
+        cursorbk(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorbk &cbk)
+        {
+            return os << W("\033[") << cbk.n << W("D");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor to beginning of line n (default 1) lines down.
+     */
+    struct cursornext
+    {
+    private:
+        int n;
+
+    public:
+        cursornext(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursornext &cnext)
+        {
+            return os << W("\033[") << cnext.n << W("E");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor to beginning of line n (default 1) lines up.
+     */
+    struct cursorprev
+    {
+    private:
+        int n;
+
+    public:
+        cursorprev(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorprev &cprev)
+        {
+            return os << W("\033[") << cprev.n << W("F");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor horizontally to column n (default 1) in the current line.
+     */
+    struct cursorhoriz
+    {
+    private:
+        int n;
+
+    public:
+        cursorhoriz(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorhoriz &ch)
+        {
+            return os << W("\033[") << ch.n << W("G");
+        }
+    };
+
+    /**
+     * @brief Moves the cursor vertically to row n (default 1) in the current column.
+     */
+    struct cursorvert
+    {
+    private:
+        int n;
+
+    public:
+        cursorvert(int n = 1) : n{n}
+        {
+        }
+
+        TEMPLATE
+        friend OSTREAM &operator<<(OSTREAM &os, const cursorvert &cbk)
+        {
+            return os << W("\033[") << cbk.n << W("d");
+        }
+    };
+
+    /**
      * @brief Moves the cursor to row n, column m.
      */
     struct cursor

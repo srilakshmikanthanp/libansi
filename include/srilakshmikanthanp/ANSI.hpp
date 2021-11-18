@@ -133,7 +133,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        clrscr(int n) : n{n}
+        clrscr(int n = 0) : n{n}
         {
         }
 
@@ -156,7 +156,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        clrlin(int n) : n{n}
+        clrlin(int n = 0) : n{n}
         {
         }
 
@@ -177,7 +177,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        scrollup(int n) : n{n}
+        scrollup(int n = 1) : n{n}
         {
         }
 
@@ -198,7 +198,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        scrolldn(int n) : n{n}
+        scrolldn(int n = 1) : n{n}
         {
         }
 

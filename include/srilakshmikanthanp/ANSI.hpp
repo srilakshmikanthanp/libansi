@@ -64,7 +64,8 @@
  * @namespace srilakshmikanthanp::ansi
  * @brief  contains ansi escape sequence
  */
-namespace srilakshmikanthanp::ansi
+namespace srilakshmikanthanp {
+namespace ansi
 {
     /**
      * @brief error code, Make sure it is zero
@@ -118,8 +119,9 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief Clears part of the screen. If n is 0 (or missing), 
-     * clear from cursor to end of screen. 
+     * @brief Clears part of the screen.
+     *
+     * If n is 0 (or missing), clear from cursor to end of screen.
      * If n is 1, clear from cursor to beginning of the screen. 
      * If n is 2, clear entire screen (and moves cursor to upper 
      * left on DOS ansi.SYS). If n is 3, clear entire screen and 
@@ -133,7 +135,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        clrscr(int n) : n{n}
+        clrscr(int n = 0) : n{n}
         {
         }
 
@@ -145,7 +147,9 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief Erases part of the line. If n is 0 (or missing),
+     * @brief Erases part of the line.
+     *
+     * If n is 0 (or missing),
      * clear from cursor to the end of the line. If n is 1, 
      * clear from cursor to beginning of the line. If n is 2, 
      * clear entire line. Cursor position does not change. 
@@ -156,7 +160,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        clrlin(int n) : n{n}
+        clrlin(int n = 0) : n{n}
         {
         }
 
@@ -168,7 +172,8 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief Scroll whole page up by n (default 1) lines. 
+     * @brief Scroll whole page up by n (default 1) lines.
+     *
      * New lines are added at the bottom.
      */
     struct scrollup
@@ -177,7 +182,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        scrollup(int n) : n{n}
+        scrollup(int n = 1) : n{n}
         {
         }
 
@@ -189,7 +194,8 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief Scroll whole page down by n (default 1) lines. 
+     * @brief Scroll whole page down by n (default 1) lines.
+     *
      * New lines are added at the top.  
      */
     struct scrolldn
@@ -198,7 +204,7 @@ namespace srilakshmikanthanp::ansi
         int n;
 
     public:
-        scrolldn(int n) : n{n}
+        scrolldn(int n = 1) : n{n}
         {
         }
 
@@ -237,7 +243,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief Restore Saved Cursor Position
+     * @brief Hides the cursor
      */
     TEMPLATE
     OSTREAM &hidecursor(OSTREAM &os)
@@ -246,7 +252,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief reset manipulator
+     * @brief Reset manipulator
      */
     TEMPLATE
     OSTREAM &reset(OSTREAM &os)
@@ -273,7 +279,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief italic 
+     * @brief Italic
      */
     TEMPLATE
     OSTREAM &italic(OSTREAM &os)
@@ -282,7 +288,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief 	Underline
+     * @brief Underline
      */
     TEMPLATE
     OSTREAM &underline(OSTREAM &os)
@@ -300,7 +306,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief invert
+     * @brief Invert
      */
     TEMPLATE
     OSTREAM &invert(OSTREAM &os)
@@ -318,7 +324,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief strike
+     * @brief Strike
      */
     TEMPLATE
     OSTREAM &strike(OSTREAM &os)
@@ -327,7 +333,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief font 
+     * @brief Font
      */
     struct font
     {
@@ -363,7 +369,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not italic
+     * @brief Not italic
      */
     TEMPLATE
     OSTREAM &notitalic(OSTREAM &os)
@@ -372,7 +378,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not underlined
+     * @brief Not underlined
      */
     TEMPLATE
     OSTREAM &notunderline(OSTREAM &os)
@@ -381,7 +387,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not blinked
+     * @brief Not blinked
      */
     TEMPLATE
     OSTREAM &notblink(OSTREAM &os)
@@ -390,7 +396,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief proportional space
+     * @brief Proportional space
      */
     TEMPLATE
     OSTREAM &prospace(OSTREAM &os)
@@ -399,7 +405,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not invert
+     * @brief Not invert
      */
     TEMPLATE
     OSTREAM &notinvert(OSTREAM &os)
@@ -408,7 +414,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not conceal
+     * @brief Not conceal
      */
     TEMPLATE
     OSTREAM &notconceal(OSTREAM &os)
@@ -417,7 +423,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not strkie
+     * @brief Not strkie
      */
     TEMPLATE
     OSTREAM &notstrike(OSTREAM &os)
@@ -614,7 +620,7 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief background black
+     * @brief Background black
      */
     TEMPLATE
     OSTREAM &bg_black(OSTREAM &os)
@@ -623,7 +629,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background red
+     * @brief Background red
      */
     TEMPLATE
     OSTREAM &bg_red(OSTREAM &os)
@@ -632,7 +638,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background green
+     * @brief Background green
      */
     TEMPLATE
     OSTREAM &bg_green(OSTREAM &os)
@@ -641,7 +647,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background yellow
+     * @brief Background yellow
      */
     TEMPLATE
     OSTREAM &bg_yellow(OSTREAM &os)
@@ -650,7 +656,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background blue
+     * @brief Background blue
      */
     TEMPLATE
     OSTREAM &bg_blue(OSTREAM &os)
@@ -659,7 +665,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background magenta
+     * @brief Background magenta
      */
     TEMPLATE
     OSTREAM &bg_magenta(OSTREAM &os)
@@ -668,7 +674,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background cyan
+     * @brief Background cyan
      */
     TEMPLATE
     OSTREAM &bg_cyan(OSTREAM &os)
@@ -677,7 +683,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background white
+     * @brief Background white
      */
     TEMPLATE
     OSTREAM &bg_white(OSTREAM &os)
@@ -686,7 +692,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightblack
+     * @brief Background brightblack
      */
     TEMPLATE
     OSTREAM &bg_brightblack(OSTREAM &os)
@@ -695,7 +701,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightred
+     * @brief Background brightred
      */
     TEMPLATE
     OSTREAM &bg_brightred(OSTREAM &os)
@@ -704,7 +710,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightgreen
+     * @brief Background brightgreen
      */
     TEMPLATE
     OSTREAM &bg_brightgreen(OSTREAM &os)
@@ -713,7 +719,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightyellow
+     * @brief Background brightyellow
      */
     TEMPLATE
     OSTREAM &bg_brightyellow(OSTREAM &os)
@@ -722,7 +728,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightblue
+     * @brief Background brightblue
      */
     TEMPLATE
     OSTREAM &bg_brightblue(OSTREAM &os)
@@ -731,7 +737,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightmagenta
+     * @brief Background brightmagenta
      */
     TEMPLATE
     OSTREAM &bg_brightmagenta(OSTREAM &os)
@@ -740,7 +746,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightcyan
+     * @brief Background brightcyan
      */
     TEMPLATE
     OSTREAM &bg_brightcyan(OSTREAM &os)
@@ -749,7 +755,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background brightwhite
+     * @brief Background brightwhite
      */
     TEMPLATE
     OSTREAM &bg_brightwhite(OSTREAM &os)
@@ -758,7 +764,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background default
+     * @brief Background default
      */
     TEMPLATE
     OSTREAM &bg_default(OSTREAM &os)
@@ -767,7 +773,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background color 
+     * @brief Background color
      */
     struct bg_color
     {
@@ -802,7 +808,7 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief not proprotional space
+     * @brief Not proprotional space
      */
     TEMPLATE
     OSTREAM &notprospace(OSTREAM &os)
@@ -811,7 +817,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief framed
+     * @brief Framed
      */
     TEMPLATE
     OSTREAM &framed(OSTREAM &os)
@@ -820,7 +826,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief encircled
+     * @brief Encircled
      */
     TEMPLATE
     OSTREAM &encircled(OSTREAM &os)
@@ -838,7 +844,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not framed or encircled
+     * @brief Not framed or encircled
      */
     TEMPLATE
     OSTREAM &notemoj(OSTREAM &os)
@@ -847,7 +853,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief not overlined
+     * @brief Not overlined
      */
     TEMPLATE
     OSTREAM &notoverlined(OSTREAM &os)
@@ -856,16 +862,16 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief background default
+     * @brief Underline default
      */
     TEMPLATE
     OSTREAM &defaultunderlinecolor(OSTREAM &os)
     {
-        return os << W("\033[49m");
+        return os << W("\033[59m");
     }
 
     /**
-     * @brief background color 
+     * @brief Underline color
      */
     struct underlinecolor
     {
@@ -900,7 +906,7 @@ namespace srilakshmikanthanp::ansi
     };
 
     /**
-     * @brief super script
+     * @brief Superscript
      */
     TEMPLATE
     OSTREAM &supscript(OSTREAM &os)
@@ -909,7 +915,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief sub script
+     * @brief Subscript
      */
     TEMPLATE
     OSTREAM &subscript(OSTREAM &os)
@@ -918,7 +924,7 @@ namespace srilakshmikanthanp::ansi
     }
 
     /**
-     * @brief colorize the given text 
+     * @brief Colorize the given text
      */
     class colorize
     {
@@ -975,7 +981,8 @@ namespace srilakshmikanthanp::ansi
             return os << reset;
         }
     };
-} // namespace srilakshmikanthanp::ansi
+} // namespace ansi
+} // namespace srilakshmikanthanp
 
 /**
  * @brief undef macros 

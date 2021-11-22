@@ -1099,65 +1099,6 @@ namespace ansi
     {
         return os << W("\033[75m");
     }
-
-    /**
-     * @brief colorize the given text 
-     */
-    class colorize
-    {
-    private:
-        double fq1, fq2, fq3, amp, cen, ps1, ps2, ps3;
-        std::string str;
-
-    public:
-        /**
-         * @brief Construct a new colorize object
-         * 
-         * @param str string
-         */
-        colorize(std::string str) : str(str)
-        {
-            fq1 = 2 * M_PI / str.size();
-            fq2 = 2 * M_PI / str.size();
-            fq3 = 2 * M_PI / str.size();
-            amp = 127;
-            cen = 128;
-            ps1 = 0 * M_PI/3;
-            ps2 = 2 * M_PI/3;
-            ps3 = 4 * M_PI/3;  
-        }
-
-        /**
-         * @brief output
-         * 
-         * @param os stream
-         * @param obj obj
-         * @return OSTREAM& stream
-         */
-        TEMPLATE
-        friend OSTREAM& operator<<(OSTREAM& os, const colorize &obj)
-        {
-            int r = 0, g = 0, b = 0, v = 0;
-
-            for(std::string::size_type i = 0; i < obj.str.size(); ++i)
-            {
-                if(!std::isspace(obj.str[i]))
-                {
-                    r  =  std::sin(obj.fq1 * v + obj.ps1) * obj.amp + obj.cen;
-                    g  =  std::sin(obj.fq2 * v + obj.ps2) * obj.amp + obj.cen;
-                    b  =  std::sin(obj.fq3 * v + obj.ps3) * obj.amp + obj.cen;
-                    v  =  v + 1;
-                    os << fg_color(r, g, b) << obj.str[i];
-                }
-                else
-                {
-                    os << obj.str[i];
-                }
-            }
-
-            return os << reset;
-        }
-    };
 } // namespace ansi
 } // namespace srilakshmikanthanp
 

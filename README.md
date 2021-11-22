@@ -98,13 +98,6 @@ std::cout << "24 bit color";
 std::cout << ansi::reset;
 ~~~
 
-**colorize:**
-
-~~~cpp
-// colorize the text
-std::cout << ansi::colorize("Text Here to colorize");
-~~~
-
 **to string:**
 
 You can easily convert this manipulators to string by using `ansi::str`

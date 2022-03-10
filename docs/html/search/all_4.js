@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['defaultunderlinecolor_27',['defaultunderlinecolor',['../namespacesrilakshmikanthanp_1_1ansi.html#aaa99eacccb390bb126861c62b6d2cdb2',1,'srilakshmikanthanp::ansi']]]
+  ['defaultunderlinecolor_0',['defaultunderlinecolor',['../namespacesrilakshmikanthanp_1_1ansi.html#a8dc90ae1c3201cb9fd4e6ccc2ed3c9e6',1,'srilakshmikanthanp::ansi']]]
 ];

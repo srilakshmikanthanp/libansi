@@ -3,8 +3,9 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "C:\\TDM-GCC-64\\bin\\g++.exe",
+            "command": "C:\\Program Files\\TDM-GCC\\bin\\g++.exe",
             "args": [
+                "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",

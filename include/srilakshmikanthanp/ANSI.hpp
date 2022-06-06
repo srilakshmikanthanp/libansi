@@ -8,47 +8,10 @@
 
 #define _USE_MATH_DEFINES
 
-#ifdef __linux__
-
 #include <iostream>
 #include <string>
 #include <sstream>
 #include <math.h>
-
-int ANSI__init()
-{
-    return 0;
-}
-
-#elif _WIN32
-
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <windows.h>
-#include <math.h>
-
-int ANSI__init()
-{
-    HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE);
-
-    if (StdOut != INVALID_HANDLE_VALUE)
-    {
-        DWORD mode = 0;
-        if (GetConsoleMode(StdOut, &mode))
-        {
-            mode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
-            if (SetConsoleMode(StdOut, mode))
-            {
-                return 0;
-            }
-        }
-    }
-
-    return GetLastError();
-}
-
-#endif
 
 /**
  * @brief Some macros that makes code smaller
@@ -68,12 +31,6 @@ namespace srilakshmikanthanp
 {
     namespace ansi
     {
-        /**
-         * @brief error code, Make sure it is zero
-         * especially for windows platforms.
-         */
-        const int init_error = ANSI__init();
-
         /**
          * @brief ansi to string
          */
@@ -110,9 +67,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorup(int n = 1) : n{n}
-            {
-            }
+            cursorup(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorup &cup)
@@ -132,9 +87,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursordn(int n = 1) : n{n}
-            {
-            }
+            cursordn(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursordn &cdn)
@@ -154,9 +107,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorfw(int n = 1) : n{n}
-            {
-            }
+            cursorfw(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorfw &cfw)
@@ -176,9 +127,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorbk(int n = 1) : n{n}
-            {
-            }
+            cursorbk(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorbk &cbk)
@@ -196,9 +145,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursornext(int n = 1) : n{n}
-            {
-            }
+            cursornext(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursornext &cnext)
@@ -216,9 +163,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorprev(int n = 1) : n{n}
-            {
-            }
+            cursorprev(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorprev &cprev)
@@ -236,9 +181,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorhoriz(int n = 1) : n{n}
-            {
-            }
+            cursorhoriz(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorhoriz &ch)
@@ -256,9 +199,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            cursorvert(int n = 1) : n{n}
-            {
-            }
+            cursorvert(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const cursorvert &cbk)
@@ -270,18 +211,16 @@ namespace srilakshmikanthanp
         /**
          * @brief Moves the cursor to row n, column m.
          */
-        struct cursor
+        struct cursormov
         {
         private:
             int n, m;
 
         public:
-            cursor(int n, int m) : n{n}, m{m}
-            {
-            }
+            cursormov(int n, int m) : n{n}, m{m} { }
 
             TEMPLATE
-            friend OSTREAM &operator<<(OSTREAM &os, const cursor &cur)
+            friend OSTREAM &operator<<(OSTREAM &os, const cursormov &cur)
             {
                 return os << W("\033[") << cur.n << W(";") << cur.m << W("H");
             }
@@ -304,9 +243,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            clrscr(int n = 0) : n{n}
-            {
-            }
+            clrscr(int n = 0) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const clrscr &dis)
@@ -323,18 +260,16 @@ namespace srilakshmikanthanp
          * clear from cursor to beginning of the line. If n is 2,
          * clear entire line. Cursor position does not change.
          */
-        struct clrlin
+        struct clrline
         {
         private:
             int n;
 
         public:
-            clrlin(int n = 0) : n{n}
-            {
-            }
+            clrline(int n = 0) : n{n} { }
 
             TEMPLATE
-            friend OSTREAM &operator<<(OSTREAM &os, const clrlin &lin)
+            friend OSTREAM &operator<<(OSTREAM &os, const clrline &lin)
             {
                 return os << W("\033[") << lin.n << W("K");
             }
@@ -351,9 +286,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            scrollup(int n = 1) : n{n}
-            {
-            }
+            scrollup(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const scrollup &ref)
@@ -373,9 +306,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            scrolldn(int n = 1) : n{n}
-            {
-            }
+            scrolldn(int n = 1) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const scrolldn &ref)
@@ -510,9 +441,7 @@ namespace srilakshmikanthanp
             int n;
 
         public:
-            font(int n) : n{n}
-            {
-            }
+            font(int n) : n{n} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const font &ref)
@@ -521,10 +450,8 @@ namespace srilakshmikanthanp
                 {
                     return os << W("\033[") << ref.n << W("m");
                 }
-                else
-                {
-                    return os;
-                }
+                
+                return os;
             }
         };
 
@@ -762,24 +689,20 @@ namespace srilakshmikanthanp
             int n, r, g, b;
 
         public:
-            fg_color(int n) : n{n}, r{-1}, g{-1}, b{-1}
-            {
-            }
-
-            fg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
-            {
-            }
+            fg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b} { }
+    
+            fg_color(int n) : n{n}, r{-1}, g{-1}, b{-1} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const fg_color &ref)
             {
-                if (ref.n >= 0 && ref.n <= 255)
-                {
-                    return os << W("\033[38;5;") << ref.n << W("m");
-                }
-                else if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
+                if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
                 {
                     return os << W("\033[38;2;") << ref.r << W(";") << ref.g << W(";") << ref.b << W("m");
+                }
+                else if (ref.n >= 0 && ref.n <= 255)
+                {
+                    return os << W("\033[38;5;") << ref.n << W("m");
                 }
                 else
                 {
@@ -950,24 +873,20 @@ namespace srilakshmikanthanp
             int n, r, g, b;
 
         public:
-            bg_color(int n) : n{n}, r{-1}, g{-1}, b{-1}
-            {
-            }
+            bg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b} { }
 
-            bg_color(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
-            {
-            }
+            bg_color(int n) : n{n}, r{-1}, g{-1}, b{-1} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const bg_color &ref)
             {
-                if (ref.n >= 0 && ref.n <= 255)
-                {
-                    return os << W("\033[48;5;") << ref.n << W("m");
-                }
-                else if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
+                if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
                 {
                     return os << W("\033[48;2;") << ref.r << W(";") << ref.g << W(";") << ref.b << W("m");
+                }
+                else if (ref.n >= 0 && ref.n <= 255)
+                {
+                    return os << W("\033[48;5;") << ref.n << W("m");
                 }
                 else
                 {
@@ -1048,24 +967,17 @@ namespace srilakshmikanthanp
             int n, r, g, b;
 
         public:
-            underlinecolor(int n) : n{n}, r{-1}, g{-1}, b{-1}
-            {
-            }
+            underlinecolor(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b} { }
 
-            underlinecolor(int r, int g, int b) : n{-1}, r{r}, g{g}, b{b}
-            {
-            }
+            underlinecolor(int n) : n{n}, r{-1}, g{-1}, b{-1} { }
 
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const underlinecolor &ref)
             {
-                if (ref.n >= 0 && ref.n <= 255)
+
+                else if (ref.n >= 0 && ref.n <= 255)
                 {
                     return os << W("\033[58;5;") << ref.n << W("m");
-                }
-                else if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
-                {
-                    return os << W("\033[58;2;") << ref.r << W(";") << ref.g << W(";") << ref.b << W("m");
                 }
                 else
                 {

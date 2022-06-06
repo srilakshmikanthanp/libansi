@@ -40,8 +40,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -57,7 +55,30 @@ It's a Header only library so just dounload `ANSI.hpp`
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Usage is very easy this library uses manipulators to make work easy,
+Usage is very easy this library uses manipulators to make work easy, if you are using windows you may need to enable virtual terminal processing,
+
+~~~cpp
+// sample to enable
+int EnableVirtualTerminalProcessing()
+{
+  HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+
+  if (StdOut != INVALID_HANDLE_VALUE)
+  {
+    DWORD mode = 0;
+    if (GetConsoleMode(StdOut, &mode))
+    {
+      mode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+      if (SetConsoleMode(StdOut, mode))
+      {
+        return 0;
+      }
+    }
+  }
+
+  return GetLastError();
+}
+~~~
 
 **3 and 4 bit colors:**
 

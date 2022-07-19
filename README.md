@@ -50,7 +50,7 @@ This is a wrapper over ANSI escape sequence for color, cursor movementand etc.
 
 ### Installation
 
-It's a Header only library so just dounload `ANSI.hpp`
+It's a Header only library so just download `ANSI.hpp`
 
 <!-- USAGE EXAMPLES -->
 ## Usage

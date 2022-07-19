@@ -974,7 +974,10 @@ namespace srilakshmikanthanp
             TEMPLATE
             friend OSTREAM &operator<<(OSTREAM &os, const underlinecolor &ref)
             {
-
+                if (ref.r >= 0 && ref.r <= 255 && ref.g >= 0 && ref.g <= 255 && ref.b >= 0 && ref.b <= 255)
+                {
+                    return os << W("\033[38;2;") << ref.r << W(";") << ref.g << W(";") << ref.b << W("m");
+                }
                 else if (ref.n >= 0 && ref.n <= 255)
                 {
                     return os << W("\033[58;5;") << ref.n << W("m");

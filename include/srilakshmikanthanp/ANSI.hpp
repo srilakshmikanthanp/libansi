@@ -34,7 +34,7 @@ namespace srilakshmikanthanp
         /**
          * @brief ansi to string
          */
-        std::string str(std::ostream &(*manip)(std::ostream &))
+        inline std::string str(std::ostream &(*manip)(std::ostream &))
         {
             std::ostringstream stream("");
             stream << manip;

@@ -124,9 +124,9 @@ std::cout << libansi::reset;
 You can easily convert this manipulators to string by using `libansi::str`
 
 ~~~cpp
-std::string bg_yellow = libansi::str(ansi::bg_yellow);
-std::string fg_blue   = libansi::str(ansi::fg_blue);
-std::string reset     = libansi::str(ansi::reset);
+std::string bg_yellow = libansi::str(libansi::bg_yellow);
+std::string fg_blue   = libansi::str(libansi::fg_blue);
+std::string reset     = libansi::str(libansi::reset);
 
 std::cout << bg_yelow;
 // foreground

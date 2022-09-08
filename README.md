@@ -7,7 +7,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-  <h3 align="center">ANSI</h3>
+  <h3 align="center">libansi</h3>
 
   <p align="center">
     ANSI escape sequence
@@ -137,7 +137,7 @@ std::cout << "Blue on Yellow";
 std::cout << reset;
 ~~~
 
-_For more examples, please refer to the [Documentation]("https://srilakshmikanthanp.github.io/ANSI/docs/html")_
+_For more examples, please refer to the [Documentation]("https://srilakshmikanthanp.github.io/libansi/docs/html")_
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -158,4 +158,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/srilakshmikanthanp/ANSI](https://github.com/srilakshmikanthanp/ANSI)
+Project Link: [https://github.com/srilakshmikanthanp/libansi](https://github.com/srilakshmikanthanp/libansi)

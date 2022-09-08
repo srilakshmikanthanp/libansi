@@ -110,13 +110,13 @@ std::cout << ansi::reset;
 
 ~~~cpp
 // background
-std::cout << ansi::bg_color(0, 255, 0);
+std::cout << libansi::bg_color(0, 255, 0);
 // foreground
-std::cout << ansi::fg_color(0, 0, 255);
+std::cout << libansi::fg_color(0, 0, 255);
 // output
 std::cout << "24 bit color";
 // reset
-std::cout << ansi::reset;
+std::cout << libansi::reset;
 ~~~
 
 **to string:**
@@ -124,9 +124,9 @@ std::cout << ansi::reset;
 You can easily convert this manipulators to string by using `ansi::str`
 
 ~~~cpp
-std::string bg_yellow = ansi::str(ansi::bg_yellow);
-std::string fg_blue   = ansi::str(ansi::fg_blue);
-std::string reset     = ansi::str(ansi::reset);
+std::string bg_yellow = libansi::str(ansi::bg_yellow);
+std::string fg_blue   = libansi::str(ansi::fg_blue);
+std::string reset     = libansi::str(ansi::reset);
 
 std::cout << bg_yelow;
 // foreground

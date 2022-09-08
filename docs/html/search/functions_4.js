@@ -11,7 +11,7 @@ var searchData=
   ['fg_5fbrightred_8',['fg_brightred',['../namespacesrilakshmikanthanp_1_1ansi.html#a9cff20c1374f28adbe1b0fef8c1d2c9e',1,'srilakshmikanthanp::ansi']]],
   ['fg_5fbrightwhite_9',['fg_brightwhite',['../namespacesrilakshmikanthanp_1_1ansi.html#a5ddb37623ed5f8ed79718246959b1ee2',1,'srilakshmikanthanp::ansi']]],
   ['fg_5fbrightyellow_10',['fg_brightyellow',['../namespacesrilakshmikanthanp_1_1ansi.html#a96d1c2a1811e108f836f9c50a1d3aee3',1,'srilakshmikanthanp::ansi']]],
-  ['fg_5fcolor_11',['fg_color',['../structsrilakshmikanthanp_1_1ansi_1_1fg__color.html#af346cf2107ef0e1e2870dacf86b40e11',1,'srilakshmikanthanp::ansi::fg_color::fg_color(int n)'],['../structsrilakshmikanthanp_1_1ansi_1_1fg__color.html#a1accb3208d3525451c62c9aec857f467',1,'srilakshmikanthanp::ansi::fg_color::fg_color(int r, int g, int b)']]],
+  ['fg_5fcolor_11',['fg_color',['../structsrilakshmikanthanp_1_1ansi_1_1fg__color.html#a1accb3208d3525451c62c9aec857f467',1,'srilakshmikanthanp::ansi::fg_color::fg_color(int r, int g, int b)'],['../structsrilakshmikanthanp_1_1ansi_1_1fg__color.html#af346cf2107ef0e1e2870dacf86b40e11',1,'srilakshmikanthanp::ansi::fg_color::fg_color(int n)']]],
   ['fg_5fcyan_12',['fg_cyan',['../namespacesrilakshmikanthanp_1_1ansi.html#a6366d486dd44ccaa436c5d826f328f8b',1,'srilakshmikanthanp::ansi']]],
   ['fg_5fdefault_13',['fg_default',['../namespacesrilakshmikanthanp_1_1ansi.html#abb3ab6b3df718711d5b6a4046cbebf94',1,'srilakshmikanthanp::ansi']]],
   ['fg_5fgreen_14',['fg_green',['../namespacesrilakshmikanthanp_1_1ansi.html#a865b427e4dfaf7dc988971356ae69abe',1,'srilakshmikanthanp::ansi']]],

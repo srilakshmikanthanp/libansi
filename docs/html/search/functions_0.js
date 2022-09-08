@@ -10,7 +10,7 @@ var searchData=
   ['bg_5fbrightred_7',['bg_brightred',['../namespacesrilakshmikanthanp_1_1ansi.html#aa67abedc5cff06ca880ee6cc46c79de8',1,'srilakshmikanthanp::ansi']]],
   ['bg_5fbrightwhite_8',['bg_brightwhite',['../namespacesrilakshmikanthanp_1_1ansi.html#ad1f2559185f3b3917eea0b42b9eabc5b',1,'srilakshmikanthanp::ansi']]],
   ['bg_5fbrightyellow_9',['bg_brightyellow',['../namespacesrilakshmikanthanp_1_1ansi.html#a57b8d0dc66028f4c9fb338677098b39b',1,'srilakshmikanthanp::ansi']]],
-  ['bg_5fcolor_10',['bg_color',['../structsrilakshmikanthanp_1_1ansi_1_1bg__color.html#afbf265cb66978c3532d0654aa2b2d5ce',1,'srilakshmikanthanp::ansi::bg_color::bg_color(int n)'],['../structsrilakshmikanthanp_1_1ansi_1_1bg__color.html#a4e77cd221f64b3ca1fd3c08ea7c01d5e',1,'srilakshmikanthanp::ansi::bg_color::bg_color(int r, int g, int b)']]],
+  ['bg_5fcolor_10',['bg_color',['../structsrilakshmikanthanp_1_1ansi_1_1bg__color.html#a4e77cd221f64b3ca1fd3c08ea7c01d5e',1,'srilakshmikanthanp::ansi::bg_color::bg_color(int r, int g, int b)'],['../structsrilakshmikanthanp_1_1ansi_1_1bg__color.html#afbf265cb66978c3532d0654aa2b2d5ce',1,'srilakshmikanthanp::ansi::bg_color::bg_color(int n)']]],
   ['bg_5fcyan_11',['bg_cyan',['../namespacesrilakshmikanthanp_1_1ansi.html#a8b2b8c0a839415c2e267f2c446b5c848',1,'srilakshmikanthanp::ansi']]],
   ['bg_5fdefault_12',['bg_default',['../namespacesrilakshmikanthanp_1_1ansi.html#a8217528bd72aaf7b4f0180186565ee88',1,'srilakshmikanthanp::ansi']]],
   ['bg_5fgreen_13',['bg_green',['../namespacesrilakshmikanthanp_1_1ansi.html#a0d13448124879ca594d4aef4fde90d44',1,'srilakshmikanthanp::ansi']]],

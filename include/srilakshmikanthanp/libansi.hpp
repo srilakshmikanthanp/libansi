@@ -24,15 +24,15 @@
 }(std::string(str))
 
 /**
- * @namespace srilakshmikanthanp::ansi
- * @brief  contains ansi escape sequence
+ * @namespace srilakshmikanthanp::libansi
+ * @brief  contains libansi escape sequence
  */
 namespace srilakshmikanthanp
 {
-    namespace ansi
+    namespace libansi
     {
         /**
-         * @brief ansi to string
+         * @brief libansi to string
          */
         inline std::string str(std::ostream &(*manip)(std::ostream &))
         {
@@ -42,7 +42,7 @@ namespace srilakshmikanthanp
         }
 
         /**
-         * @brief ansi to str
+         * @brief libansi to str
          *
          * @tparam T type
          * @param obj object
@@ -232,7 +232,7 @@ namespace srilakshmikanthanp
          * If n is 0 (or missing), clear from cursor to end of screen.
          * If n is 1, clear from cursor to beginning of the screen.
          * If n is 2, clear entire screen (and moves cursor to upper
-         * left on DOS ansi.SYS). If n is 3, clear entire screen and
+         * left on DOS libansi.SYS). If n is 3, clear entire screen and
          * delete all lines saved in the scrollback buffer
          * (this feature was added for xterm and is supported by
          * other terminal applications).
@@ -1015,7 +1015,7 @@ namespace srilakshmikanthanp
         {
             return os << W("\033[75m");
         }
-    } // namespace ansi
+    } // namespace libansi
 } // namespace srilakshmikanthanp
 
 /**

@@ -12,11 +12,11 @@
   <p align="center">
     ANSI escape sequence
     <br />
-    <a href="https://srilakshmikanthanp.github.io/ANSI/docs/html"><strong>Explore the docs »</strong></a>
+    <a href="https://srilakshmikanthanp.github.io/libansi/docs/html"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/srilakshmikanthanp/ANSI/issues">Report Bug</a>
+    <a href="https://github.com/srilakshmikanthanp/libansi/issues">Report Bug</a>
     ·
-    <a href="https://github.com/srilakshmikanthanp/ANSI/issues">Request Feature</a>
+    <a href="https://github.com/srilakshmikanthanp/libansi/issues">Request Feature</a>
   </p>
 </p>
 
@@ -50,7 +50,7 @@ This is a wrapper over ANSI escape sequence for color, cursor movementand etc.
 
 ### Installation
 
-It's a Header only library so just download `ANSI.hpp`
+It's a Header only library so just download `libansi.hpp`
 
 <!-- USAGE EXAMPLES -->
 ## Usage

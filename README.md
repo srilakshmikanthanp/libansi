@@ -84,26 +84,26 @@ int EnableVirtualTerminalProcessing()
 
 ~~~cpp
 // background
-std::cout << ansi::bg_yellow;
+std::cout << libansi::bg_yellow;
 // foreground
-std::cout << ansi::fg_blue;
+std::cout << libansi::fg_blue;
 // output
 std::cout << "Blue on yellow";
 // reset
-std::cout << ansi::reset;
+std::cout << libansi::reset;
 ~~~
 
 **8 bit color:**
 
 ~~~cpp
 // background
-std::cout << ansi::bg_color(157);
+std::cout << libansi::bg_color(157);
 // foreground
-std::cout << ansi::fg_color(100);
+std::cout << libansi::fg_color(100);
 // outpt
 std::cout << "8 bit color";
 // reset
-std::cout << ansi::reset;
+std::cout << libansi::reset;
 ~~~
 
 **24 bit color:**
@@ -121,7 +121,7 @@ std::cout << libansi::reset;
 
 **to string:**
 
-You can easily convert this manipulators to string by using `ansi::str`
+You can easily convert this manipulators to string by using `libansi::str`
 
 ~~~cpp
 std::string bg_yellow = libansi::str(ansi::bg_yellow);

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hidecursor_0',['hidecursor',['../namespacesrilakshmikanthanp_1_1ansi.html#a4c503fb47f21059370882f2671cd7294',1,'srilakshmikanthanp::ansi']]]
+  ['hidecursor_0',['hidecursor',['../namespacesrilakshmikanthanp_1_1libansi.html#aea1ae717f1428100e922538341ce2fcd',1,'srilakshmikanthanp::libansi']]]
 ];

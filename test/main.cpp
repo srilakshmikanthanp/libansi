@@ -3,7 +3,7 @@
 // This software is released under the MIT License.
 // https://opensource.org/licenses/MIT
 
-#include "../include/srilakshmikanthanp/libansi.hpp"
+#include "../src/srilakshmikanthanp/libansi.hpp"
 
 using namespace srilakshmikanthanp;
 

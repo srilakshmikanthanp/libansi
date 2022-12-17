@@ -61,7 +61,6 @@ Usage is very easy this library uses manipulators to make work easy, if you are 
 // sample to enable
 int EnableVirtualTerminalProcessing()
 {
-
   HANDLE StdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
   if (StdOut != INVALID_HANDLE_VALUE)
